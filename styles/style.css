@@ -1,0 +1,88 @@
+:root{
+  --brand:#0b5fff;
+  --bg:#f6f7fb;
+  --text:#1f2937;
+  --muted:#6b7280;
+  --card:#ffffff;
+  --radius:10px;
+  --max-width:1100px;
+}
+html{font-size:16px}
+@media (min-width:1200px){html{font-size:17px}}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  margin:0;
+.skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip-link:focus{left:12px;top:12px;width:auto;height:auto;padding:8px 12px;background:#111;color:#fff;border-radius:6px;z-index:100}
+  -webkit-font-smoothing:antialiased
+}
+.container{max-width:var(--max-width);margin:0 auto;padding:24px}
+.site-header{background:#fff;border-bottom:1px solid #e6e9ef}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.brand h1{margin:0;font-size:20px;color:var(--brand)}
+.brand .tag{margin:0;font-size:12px;color:var(--muted)}
+.main-nav a{margin-left:16px;color:var(--muted);text-decoration:none;padding:10px 6px;border-radius:6px}
+.main-nav a.active,.main-nav a:hover{color:var(--brand);background:rgba(11,95,255,0.06)}
+.hero{display:grid;grid-template-columns:1fr 360px;gap:32px;align-items:center;padding:48px 0}
+.hero-content h2{font-size:32px;margin:0 0 12px}
+.hero-content p{margin:0 0 18px;color:var(--muted)}
+.hero-image{background:linear-gradient(135deg,#e6f0ff,#f7fbff);height:220px;border-radius:12px;box-shadow:0 6px 18px rgba(16,24,40,0.06)}
+.cta .btn{display:inline-block;padding:10px 16px;border-radius:8px;background:var(--brand);color:#fff;text-decoration:none;margin-right:8px}
+.cta .btn.ghost{background:transparent;color:var(--brand);border:1px solid rgba(11,95,255,0.12)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:28px 0}
+.card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(16,24,40,0.04)}
+.mission{background:linear-gradient(90deg,#fff,#fbfdff);padding:20px;border-radius:10px}
+.site-footer{margin-top:36px;background:transparent;padding:22px 0}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;color:var(--muted)}
+.lead{color:var(--muted);margin-bottom:18px}
+.course-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.course{background:var(--card);padding:16px;border-radius:8px;border:1px solid #eef2ff}
+.course .meta{font-size:13px;color:var(--muted);margin-top:8px}
+.people-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.person{background:var(--card);padding:18px;border-radius:10px;text-align:center}
+.avatar{height:88px;width:88px;border-radius:50%;margin:0 auto 12px;background:linear-gradient(45deg,#e6f0ff,#f0f7ff)}
+.admissions-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.contact-page .contact-info{display:flex;gap:24px;margin-bottom:20px}
+.contact-info div{background:var(--card);padding:16px;border-radius:10px}
+form{background:var(--card);padding:18px;border-radius:10px;border:1px solid #eef2ff}
+label{display:block;font-size:13px;margin:12px 0 6px;color:var(--muted)}
+input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef9;background:#fff}
+.form-actions{margin-top:12px}
+.btn{background:var(--brand);color:#fff;padding:10px 14px;border-radius:8px;border:none;cursor:pointer}
+.btn:hover{opacity:0.95}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+.compact{padding-left:18px;margin-top:8px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:24px}
+.news .muted{margin:6px 0}
+.grid-stats{display:flex;gap:18px;margin-top:18px}
+.stat{background:var(--card);padding:12px;border-radius:10px;flex:1;text-align:center}
+.stat strong{display:block;font-size:20px}
+.alumni{margin-top:18px}
+.map-placeholder{background:#eef6ff;padding:24px;border-radius:8px;border:1px dashed #d7eaff;text-align:center;color:var(--muted)}
+.badge{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(11,95,255,0.08);color:var(--brand);font-weight:600;font-size:13px}
+.timeline{border-left:3px solid #eef3ff;padding-left:16px}
+.timeline li{margin:10px 0}
+.footer-links{display:flex;gap:18px;align-items:center}
+.socials a{margin-left:8px;color:var(--muted);text-decoration:none}
+.muted small{display:block}
+
+/* Print optimizations */
+@media print{
+  body{background:#fff;color:#000}
+  .site-header,.site-footer{display:none}
+  .container{padding:8px}
+}
+.staff-list{background:var(--card);padding:16px;border-radius:8px}
+
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;gap:20px}
+  .cards{grid-template-columns:1fr}
+  .course-grid,.people-grid,.admissions-grid{grid-template-columns:1fr}
+  .contact-page .contact-info{flex-direction:column}
+  .main-nav{display:flex;flex-wrap:wrap;margin-top:10px}
+}
